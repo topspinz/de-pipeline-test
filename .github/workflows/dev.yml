@@ -13,9 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repo
-      uses: actions/checkout@v3
     - name: Deploy to Astro
-      run: |
-        brew install astronomer/cloud/astrocloud
-        astrocloud deploy ${{ secrets.ASTRONOMER_DEPLOYMENT_ID_DEV }}
+      uses: astronomer/deploy-action@v0.9.0
+      with:
+        deployment-id: ${{ secrets.ASTRONOMER_DEPLOYMENT_ID_DEV }}
