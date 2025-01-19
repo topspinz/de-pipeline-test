@@ -7,7 +7,7 @@ on:
 
 env:
   ## Sets Deployment API key credentials as environment variables
-  ASTRO_API_TOKEN: ${{ secrets.ASTRO_API_TOKEN_DEV }}
+  ASTRO_API_TOKEN: ${{ secrets.ASTRONOMER_API_TOKEN_DEV }}
 
 jobs:
   build:
