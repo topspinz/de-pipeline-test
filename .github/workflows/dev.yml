@@ -18,4 +18,4 @@ jobs:
       with:
         deployment-id: cm640qzom14ot01khlwso1aja
         pytest: true
-        pytest-file: tests/test_dag_example.py
+        pytest-file: tests/dags/test_dag_example.py
