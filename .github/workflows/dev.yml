@@ -17,3 +17,5 @@ jobs:
       uses: astronomer/deploy-action@v0.9.0
       with:
         deployment-id: cm640qzom14ot01khlwso1aja
+        pytest: true
+        pytest-file: tests/test_dag_example.py
