@@ -16,8 +16,8 @@ def suppress_logging(namespace):
         yield
     finally:
         logger.disabled = old_value
-        
 
+        
 def test_dag_count():
     """Test to ensure there are only two DAGs in the DAG folder."""
     with suppress_logging('airflow'):
