@@ -23,7 +23,7 @@ def test_dag_count():
     with suppress_logging("airflow"):
         dag_bag = DagBag()
         dag_count = len(dag_bag.dags)
-        assert dag_count == 1, "Expected {0} DAGs, but found {1}".format(1, dag_count)
+        assert dag_count == 2, "Expected {0} DAGs, but found {1}".format(2, dag_count)
 
 
 def get_import_errors():
