@@ -17,6 +17,12 @@ def suppress_logging(namespace):
     finally:
         logger.disabled = old_value
 
+def test_dag_count():
+    """Test to ensure there are only two DAGs in the DAG folder."""
+    with suppress_logging('airflow'):
+        dag_bag = DagBag()
+        dag_count = len(dag_bag.dags)
+        assert dag_count == 1, "Expected {0} DAGs, but found {1}".format(1, dag_count)
 
 def get_import_errors():
     """
