@@ -10,7 +10,7 @@ env:
   ASTRO_API_TOKEN: ${{ secrets.ASTRONOMER_API_TOKEN_DEV }}
 
 jobs:
- lint-and-format:
+  lint-and-format:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repo
