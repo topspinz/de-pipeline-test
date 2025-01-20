@@ -53,8 +53,8 @@ def example_hello():
             r.raise_for_status()
             number_of_people_in_space = r.json()["number"]
             list_of_people_in_space = r.json()["people"]
-        except:
-            print("API currently not available, using hardcoded data instead.")
+        except Exception as e:
+            print(f"API currently not available, using hardcoded data instead. {e}")
             number_of_people_in_space = 12
             list_of_people_in_space = [
                 {"craft": "ISS", "name": "Oleg Kononenko"},
